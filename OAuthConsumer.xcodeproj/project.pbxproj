@@ -30,7 +30,6 @@
 		FCAAF0800CC95E6A00C52F82 /* OAToken.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAAF07E0CC95E6A00C52F82 /* OAToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCAAF0810CC95E6A00C52F82 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF07F0CC95E6A00C52F82 /* OAToken.m */; };
 		FCAAF08F0CC9646E00C52F82 /* OATokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF08E0CC9646E00C52F82 /* OATokenTest.m */; };
-		FCAAF2140CC9846D00C52F82 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF2130CC9846D00C52F82 /* OAConsumer.m */; };
 		FCAAF2150CC9846D00C52F82 /* OAConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAAF2120CC9846D00C52F82 /* OAConsumer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCAAF2160CC9846D00C52F82 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF2130CC9846D00C52F82 /* OAConsumer.m */; };
 		FCAAF2350CC985DA00C52F82 /* OAConsumerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF2340CC985DA00C52F82 /* OAConsumerTest.m */; };
@@ -55,6 +54,8 @@
 		FCAAF3CD0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAAF3CA0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCAAF3CE0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */; };
 		FCAAF3D30CCC0C4400C52F82 /* NSMutableURLRequest+ParametersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF3D20CCC0C4400C52F82 /* NSMutableURLRequest+ParametersTest.m */; };
+		FCDD1C1E0CDD12C800DB97C5 /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OAuthConsumer.framework */; };
+		FCDD1C270CDD132600DB97C5 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF2130CC9846D00C52F82 /* OAConsumer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCDD1C1E0CDD12C800DB97C5 /* OAuthConsumer.framework in Frameworks */,
 				FCAAF2740CC9885800C52F82 /* Security.framework in Frameworks */,
 				FCAAF3510CC9E2D300C52F82 /* libssl.dylib in Frameworks */,
 				FC6C11080CD99ECD00A85842 /* libcrypto.dylib in Frameworks */,
@@ -434,7 +436,7 @@
 			files = (
 				FC6C11E10CD9A40E00A85842 /* OAToken.m in Sources */,
 				FCAAF08F0CC9646E00C52F82 /* OATokenTest.m in Sources */,
-				FCAAF2140CC9846D00C52F82 /* OAConsumer.m in Sources */,
+				FCDD1C270CDD132600DB97C5 /* OAConsumer.m in Sources */,
 				FCAAF2350CC985DA00C52F82 /* OAConsumerTest.m in Sources */,
 				FCAAF35B0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				FC95DF370CCDBFF900B870E6 /* OAHMAC_SHA1SignatureProviderTest.m in Sources */,
@@ -490,7 +492,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OAuthConsumer_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = OAuthConsumer;
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = YES;
@@ -513,7 +515,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OAuthConsumer_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = OAuthConsumer;
 				WRAPPER_EXTENSION = framework;
 			};
