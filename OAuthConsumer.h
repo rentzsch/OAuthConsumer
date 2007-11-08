@@ -34,4 +34,5 @@
 #import <OAuthConsumer/OAHMAC_SHA1SignatureProvider.h>
 #import <OAuthConsumer/OAPlaintextSignatureProvider.h>
 #import <OAuthConsumer/OARequestParameter.h>
-
+#import <OAuthConsumer/OAServiceTicket.h>
+#import <OAuthConsumer/OADataFetcher.h>
