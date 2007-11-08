@@ -54,8 +54,16 @@
 		FCAAF3CD0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAAF3CA0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCAAF3CE0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */; };
 		FCAAF3D30CCC0C4400C52F82 /* NSMutableURLRequest+ParametersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF3D20CCC0C4400C52F82 /* NSMutableURLRequest+ParametersTest.m */; };
+		FCB87CA90CDFF1A000C75049 /* OAServiceTicket.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB87CA70CDFF1A000C75049 /* OAServiceTicket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCB87CAA0CDFF1A000C75049 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */; };
+		FCB87CAB0CDFF1A000C75049 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */; };
+		FCB87CB20CDFF40A00C75049 /* OADataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = FCB87CB00CDFF40A00C75049 /* OADataFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCB87CB30CDFF40A00C75049 /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */; };
+		FCB87CB40CDFF40A00C75049 /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */; };
 		FCDD1C1E0CDD12C800DB97C5 /* OAuthConsumer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OAuthConsumer.framework */; };
 		FCDD1C270CDD132600DB97C5 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF2130CC9846D00C52F82 /* OAConsumer.m */; };
+		FCF317EF0CE181A30023F60C /* OADataFetcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF317EE0CE181A30023F60C /* OADataFetcherTest.m */; };
+		FCF317F00CE181A30023F60C /* OADataFetcherTest.h in Headers */ = {isa = PBXBuildFile; fileRef = FCF317ED0CE181A30023F60C /* OADataFetcherTest.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +129,12 @@
 		FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
 		FCAAF3D10CCC0C4400C52F82 /* NSMutableURLRequest+ParametersTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+ParametersTest.h"; sourceTree = "<group>"; };
 		FCAAF3D20CCC0C4400C52F82 /* NSMutableURLRequest+ParametersTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+ParametersTest.m"; sourceTree = "<group>"; };
+		FCB87CA70CDFF1A000C75049 /* OAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAServiceTicket.h; sourceTree = "<group>"; };
+		FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAServiceTicket.m; sourceTree = "<group>"; };
+		FCB87CB00CDFF40A00C75049 /* OADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OADataFetcher.h; sourceTree = "<group>"; };
+		FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OADataFetcher.m; sourceTree = "<group>"; };
+		FCF317ED0CE181A30023F60C /* OADataFetcherTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OADataFetcherTest.h; sourceTree = "<group>"; };
+		FCF317EE0CE181A30023F60C /* OADataFetcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OADataFetcherTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +224,10 @@
 				FC98DE020CD1659000453F6C /* OAPlaintextSignatureProvider.m */,
 				FCAAF3BB0CC9F06C00C52F82 /* OARequestParameter.h */,
 				FCAAF3BC0CC9F06C00C52F82 /* OARequestParameter.m */,
+				FCB87CA70CDFF1A000C75049 /* OAServiceTicket.h */,
+				FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */,
+				FCB87CB00CDFF40A00C75049 /* OADataFetcher.h */,
+				FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -292,6 +310,8 @@
 				FCAAF3D20CCC0C4400C52F82 /* NSMutableURLRequest+ParametersTest.m */,
 				FC98DF5A0CD19B4400453F6C /* NSURL+BaseTest.h */,
 				FC98DF5B0CD19B4400453F6C /* NSURL+BaseTest.m */,
+				FCF317ED0CE181A30023F60C /* OADataFetcherTest.h */,
+				FCF317EE0CE181A30023F60C /* OADataFetcherTest.m */,
 				FC6C126A0CD9AF6600A85842 /* OATestServer.rb */,
 			);
 			name = Tests;
@@ -315,6 +335,9 @@
 				FCAAF35C0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.h in Headers */,
 				FC98DE040CD1659000453F6C /* OAPlaintextSignatureProvider.h in Headers */,
 				FC6C10C40CD9998400A85842 /* OARequestParameter.h in Headers */,
+				FCB87CA90CDFF1A000C75049 /* OAServiceTicket.h in Headers */,
+				FCB87CB20CDFF40A00C75049 /* OADataFetcher.h in Headers */,
+				FCF317F00CE181A30023F60C /* OADataFetcherTest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +450,8 @@
 				FCAAF3CE0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m in Sources */,
 				FC98DE050CD1659000453F6C /* OAPlaintextSignatureProvider.m in Sources */,
 				FC98DF590CD19A7C00453F6C /* NSURL+Base.m in Sources */,
+				FCB87CAA0CDFF1A000C75049 /* OAServiceTicket.m in Sources */,
+				FCB87CB30CDFF40A00C75049 /* OADataFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +477,9 @@
 				FC98DE540CD1697300453F6C /* OAPlaintextSignatureProviderTest.m in Sources */,
 				FC98DF570CD19A7C00453F6C /* NSURL+Base.m in Sources */,
 				FC98DF5C0CD19B4400453F6C /* NSURL+BaseTest.m in Sources */,
+				FCB87CAB0CDFF1A000C75049 /* OAServiceTicket.m in Sources */,
+				FCB87CB40CDFF40A00C75049 /* OADataFetcher.m in Sources */,
+				FCF317EF0CE181A30023F60C /* OADataFetcherTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
