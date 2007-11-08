@@ -31,3 +31,7 @@ require 'sinatra'
 get '/' do
   "Testing..."
 end
+
+post '/request_token' do
+  "oauth_token=nnch734d00sl2jdk&oauth_token_secret=pfkkdhi9sl3r4s00"
+end
