@@ -277,13 +277,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
-									<integer>21</integer>
+									<integer>8</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 121}, {316, 910}}</string>
+							<string>{{0, 0}, {316, 910}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -320,7 +320,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>NSString+URLEncoding.m</string>
+								<string>OATokenTest.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>NSString+URLEncoding.m</string>
+										<string>OATokenTest.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>FC0A00EA0CE3246300D0849D</string>
+										<string>FCF3E4770CE38F5100E33D37</string>
 										<key>history</key>
 										<array>
 											<string>FC79057B0CD9874A00429116</string>
@@ -357,7 +357,6 @@
 											<string>FC0C959F0CDAD25800E4076F</string>
 											<string>FCDA82BE0CDAD4B700842BDC</string>
 											<string>FCDD1C2D0CDD133000DB97C5</string>
-											<string>FCDD1C2E0CDD133000DB97C5</string>
 											<string>FC06E6130CDF0333008C2FE3</string>
 											<string>FCB87CC40CDFF83600C75049</string>
 											<string>FCB87D5F0CDFFCE800C75049</string>
@@ -365,7 +364,6 @@
 											<string>FC6AA6420CE2EE9E00B28719</string>
 											<string>FC6AA6430CE2EE9E00B28719</string>
 											<string>FC6AA6440CE2EE9E00B28719</string>
-											<string>FC6AA6450CE2EE9E00B28719</string>
 											<string>FC6AA6460CE2EE9E00B28719</string>
 											<string>FC6AA6480CE2EE9E00B28719</string>
 											<string>FC6AA70D0CE3008900B28719</string>
@@ -374,7 +372,6 @@
 											<string>FC6AA7110CE3008900B28719</string>
 											<string>FC6AA7120CE3008900B28719</string>
 											<string>FC6AA7130CE3008900B28719</string>
-											<string>FC6AA72C0CE302E800B28719</string>
 											<string>FC6AA7810CE3102500B28719</string>
 											<string>FC6AA7820CE3102500B28719</string>
 											<string>FC6AA7830CE3102500B28719</string>
@@ -385,8 +382,11 @@
 											<string>FC6AA7880CE3102500B28719</string>
 											<string>FC6AA7890CE3102500B28719</string>
 											<string>FC6AA7A90CE311D300B28719</string>
-											<string>FC0A00E70CE3246300D0849D</string>
-											<string>FC0A00E80CE3246300D0849D</string>
+											<string>FCF3E4060CE3783800E33D37</string>
+											<string>FCF3E4690CE38F1000E33D37</string>
+											<string>FCF3E46A0CE38F1000E33D37</string>
+											<string>FCF3E4750CE38F5100E33D37</string>
+											<string>FCF3E4720CE38F3D00E33D37</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -442,7 +442,10 @@
 											<string>FCB87CE10CDFF83600C75049</string>
 											<string>FCF318160CE182360023F60C</string>
 											<string>FCF3181B0CE182360023F60C</string>
-											<string>FC0A00E90CE3246300D0849D</string>
+											<string>FCF3E46C0CE38F1000E33D37</string>
+											<string>FCF3E46D0CE38F1000E33D37</string>
+											<string>FCF3E46E0CE38F1000E33D37</string>
+											<string>FCF3E4760CE38F5100E33D37</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -500,9 +503,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>FC0A00EB0CE3246300D0849D</string>
+				<string>FCF3E4600CE38C6E00E33D37</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>FC0A00EC0CE3246300D0849D</string>
+				<string>FCF3E4610CE38C6E00E33D37</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -656,12 +659,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>OATokenTest.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -717,7 +722,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>FCAAF0980CC9687B00C52F82</string>
-				<string>FC0A00ED0CE3246300D0849D</string>
+				<string>FCF3E4680CE38EF200E33D37</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
