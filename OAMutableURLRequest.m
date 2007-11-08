@@ -104,7 +104,7 @@ signatureProvider:(id<OASignatureProviding>)aProvider
                                                   token.secret]];
     
     // set OAuth headers
-    NSString *oauthHeader = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", oauth_token=\"%@\", oauth_signature_method=\"%@\", oauth_signature=\"%@\", oauth_timestamp=\"%@\", oauth_nonce=\"%@\", oauth_version=1.0\"",
+    NSString *oauthHeader = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", oauth_token=\"%@\", oauth_signature_method=\"%@\", oauth_signature=\"%@\", oauth_timestamp=\"%@\", oauth_nonce=\"%@\", oauth_version=\"1.0\"",
                              [realm encodedURLParameterString],
                              [consumer.key encodedURLParameterString],
                              [token.key encodedURLParameterString],
