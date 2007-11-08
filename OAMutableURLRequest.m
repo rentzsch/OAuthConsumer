@@ -104,14 +104,23 @@ signatureProvider:(id<OASignatureProviding>)aProvider
                                                   token.secret]];
     
     // set OAuth headers
-    NSString *oauthHeader = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", oauth_token=\"%@\", oauth_signature_method=\"%@\", oauth_signature=\"%@\", oauth_timestamp=\"%@\", oauth_nonce=\"%@\", oauth_version=\"1.0\"",
+    
+    NSString *oauthToken;
+    if ([token.key isEqualToString:@""]) {
+        oauthToken = @""; // not used on Request Token transactions
+    } else {
+        oauthToken = [NSString stringWithFormat:@"oauth_token=\"%@\", ", [token.key encodedURLParameterString]];
+    }
+    
+    NSString *oauthHeader = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", %@oauth_signature_method=\"%@\", oauth_signature=\"%@\", oauth_timestamp=\"%@\", oauth_nonce=\"%@\", oauth_version=\"1.0\"",
                              [realm encodedURLParameterString],
                              [consumer.key encodedURLParameterString],
-                             [token.key encodedURLParameterString],
+                             oauthToken,
                              [[signatureProvider name] encodedURLParameterString],
                              [signature encodedURLParameterString],
                              timestamp,
                              nonce];
+
     [self setValue:oauthHeader forHTTPHeaderField:@"Authorization"];
 }
 
@@ -132,11 +141,14 @@ signatureProvider:(id<OASignatureProviding>)aProvider
     NSMutableArray *parameterPairs = [[NSMutableArray alloc] initWithCapacity:(6 + [[self parameters] count])]; // 6 being the number of OAuth params in the Signature Base String
     
     [parameterPairs addObject:[[[OARequestParameter alloc] initWithName:@"oauth_consumer_key" value:consumer.key] URLEncodedNameValuePair]];
-    [parameterPairs addObject:[[[OARequestParameter alloc] initWithName:@"oauth_token" value:token.key] URLEncodedNameValuePair]];
     [parameterPairs addObject:[[[OARequestParameter alloc] initWithName:@"oauth_signature_method" value:[signatureProvider name]] URLEncodedNameValuePair]];
     [parameterPairs addObject:[[[OARequestParameter alloc] initWithName:@"oauth_timestamp" value:timestamp] URLEncodedNameValuePair]];
     [parameterPairs addObject:[[[OARequestParameter alloc] initWithName:@"oauth_nonce" value:nonce] URLEncodedNameValuePair]];
     [parameterPairs addObject:[[[OARequestParameter alloc] initWithName:@"oauth_version" value:@"1.0"] URLEncodedNameValuePair]];
+    
+    if (![token.key isEqualToString:@""]) {
+        [parameterPairs addObject:[[[OARequestParameter alloc] initWithName:@"oauth_token" value:token.key] URLEncodedNameValuePair]];
+    }
     
     for (OARequestParameter *param in [self parameters]) {
         [parameterPairs addObject:[param URLEncodedNameValuePair]];
