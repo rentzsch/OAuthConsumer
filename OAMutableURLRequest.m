@@ -158,12 +158,10 @@ signatureProvider:(id<OASignatureProviding>)aProvider
     NSString *normalizedRequestParameters = [sortedPairs componentsJoinedByString:@"&"];
     
     // OAuth Spec, Section 9.1.2 "Concatenate Request Elements"
-    return [NSString stringWithFormat:@"%@&%@&%@&%@&%@",
+    return [NSString stringWithFormat:@"%@&%@&%@",
             [self HTTPMethod],
             [[[self URL] URLStringWithoutQuery] encodedURLParameterString],
-            [normalizedRequestParameters encodedURLString],
-            [consumer.secret encodedURLString],
-            [token.secret encodedURLString]];
+            [normalizedRequestParameters encodedURLString]];
 }
 
 @end
