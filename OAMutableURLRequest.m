@@ -42,7 +42,7 @@
 		 consumer:(OAConsumer *)aConsumer
 			token:(OAToken *)aToken
             realm:(NSString *)aRealm
-signatureProvider:(id<OASignatureProviding>)aProvider {
+signatureProvider:(id<OASignatureProviding, NSObject>)aProvider {
     [super initWithURL:aUrl
            cachePolicy:NSURLRequestReloadIgnoringCacheData
        timeoutInterval:10.0];
@@ -66,7 +66,7 @@ signatureProvider:(id<OASignatureProviding>)aProvider {
     if (aProvider == nil) {
         signatureProvider = [[OAHMAC_SHA1SignatureProvider alloc] init];
     } else {
-        signatureProvider = aProvider;
+        signatureProvider = [aProvider retain];
     }
     
     [self _generateTimestamp];
@@ -81,7 +81,7 @@ signatureProvider:(id<OASignatureProviding>)aProvider {
 		 consumer:(OAConsumer *)aConsumer
 			token:(OAToken *)aToken
             realm:(NSString *)aRealm
-signatureProvider:(id<OASignatureProviding>)aProvider
+signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
             nonce:(NSString *)aNonce
         timestamp:(NSString *)aTimestamp {
     [self initWithURL:aUrl
@@ -125,7 +125,7 @@ signatureProvider:(id<OASignatureProviding>)aProvider
 }
 
 - (void)_generateTimestamp {
-    timestamp = [NSString stringWithFormat:@"%d", time(NULL)];
+    timestamp = [[NSString stringWithFormat:@"%d", time(NULL)] retain];
 }
 
 - (void)_generateNonce {
