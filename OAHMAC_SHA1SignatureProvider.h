@@ -24,12 +24,8 @@
 //  THE SOFTWARE.
 
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 #import "OASignatureProviding.h"
-#import <openssl/evp.h>
-#import <openssl/err.h>
-#import <openssl/hmac.h>
-#import <openssl/bio.h>
 
 
 @interface OAHMAC_SHA1SignatureProvider : NSObject <OASignatureProviding>

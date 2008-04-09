@@ -26,6 +26,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "OAToken.h"
+#import "OAToken_KeychainExtensions.h"
 
 
 @interface OATokenTest : SenTestCase {

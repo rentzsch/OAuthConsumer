@@ -23,9 +23,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <Cocoa/Cocoa.h>
-#import <Security/Security.h>
-
+#import <Foundation/Foundation.h>
 
 @interface OAToken : NSObject {
 @protected
@@ -36,9 +34,8 @@
 @property(copy, readwrite) NSString *secret;
 
 - (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret;
-- (id)initWithKeychainUsingAppName:(NSString *)name serviceProviderName:(NSString *)provider;
+- (id)initWithUserDefaultsUsingServiceProviderName:(NSString *)provider prefix:(NSString *)prefix;
 - (id)initWithHTTPResponseBody:(NSString *)body;
-- (int)storeInDefaultKeychainWithAppName:(NSString *)name serviceProviderName:(NSString *)provider;
-- (int)storeInKeychain:(SecKeychainRef)keychain appName:(NSString *)name serviceProviderName:(NSString *)provider;
+- (int)storeInUserDefaultsWithServiceProviderName:(NSString *)provider prefix:(NSString *)prefix;
 
 @end

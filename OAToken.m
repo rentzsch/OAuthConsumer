@@ -63,83 +63,30 @@
     return self;
 }
 
-- (id)initWithKeychainUsingAppName:(NSString *)name serviceProviderName:(NSString *)provider {
-    [super init];
-    SecKeychainItemRef item;
-	NSString *serviceName = [NSString stringWithFormat:@"%@::OAuth::%@", name, provider];
-	OSStatus status = SecKeychainFindGenericPassword(NULL,
-                                                strlen([serviceName UTF8String]),
-                                                [serviceName UTF8String],
-                                                0,
-                                                NULL,
-                                                NULL,
-                                                NULL,
-                                                &item);
-    if (status != noErr) {
-        return nil;
-    }
-    
-    // from Advanced Mac OS X Programming, ch. 16
-    UInt32 length;
-    char *password;
-    SecKeychainAttribute attributes[8];
-    SecKeychainAttributeList list;
-	
-    attributes[0].tag = kSecAccountItemAttr;
-    attributes[1].tag = kSecDescriptionItemAttr;
-    attributes[2].tag = kSecLabelItemAttr;
-    attributes[3].tag = kSecModDateItemAttr;
-    
-    list.count = 4;
-    list.attr = attributes;
-    
-    status = SecKeychainItemCopyContent(item, NULL, &list, &length, (void **)&password);
-    
-    if (status == noErr) {
-        self.key = [NSString stringWithCString:list.attr[0].data
-                                        length:list.attr[0].length];
-        if (password != NULL) {
-            char passwordBuffer[1024];
-            
-            if (length > 1023) {
-                length = 1023;
-            }
-            strncpy(passwordBuffer, password, length);
-            
-            passwordBuffer[length] = '\0';
-			self.secret = [NSString stringWithCString:passwordBuffer];
-        }
-        
-        SecKeychainItemFreeContent(&list, password);
-        
-    } else {
-		// TODO find out why this always works in i386 and always fails on ppc
-		NSLog(@"Error from SecKeychainItemCopyContent: %d", status);
-        return nil;
-    }
-    
-    NSMakeCollectable(item);
-    
-    return self;
+
+- (id)initWithUserDefaultsUsingServiceProviderName:(NSString *)provider prefix:(NSString *)prefix
+{
+[super init];
+NSString *theKey = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"OAUTH_%@_%@_KEY", prefix, provider]];
+NSString *theSecret = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"OAUTH_%@_%@_SECRET", prefix, provider]];
+fprintf(stderr, "FOUND: %s %s\n", theKey.UTF8String, theSecret.UTF8String);
+
+if (theKey == NULL || theSecret == NULL)
+	return(nil);
+self.key = theKey;
+self.secret = theSecret;
+return(self);
 }
 
-#pragma mark Keychain
 
-- (int)storeInDefaultKeychainWithAppName:(NSString *)name serviceProviderName:(NSString *)provider {
-    return [self storeInKeychain:NULL appName:name serviceProviderName:provider];
-}
+- (int)storeInUserDefaultsWithServiceProviderName:(NSString *)provider prefix:(NSString *)prefix
+{
+fprintf(stderr, "WRITING: %s %s\n", self.key.UTF8String, self.secret.UTF8String);
 
-- (int)storeInKeychain:(SecKeychainRef)keychain appName:(NSString *)name serviceProviderName:(NSString *)provider {
-	OSStatus status = SecKeychainAddGenericPassword(keychain,                                     
-                                                    [name length] + [provider length] + 9, 
-                                                    [[NSString stringWithFormat:@"%@::OAuth::%@", name, provider] UTF8String],
-                                                    [self.key length],                        
-                                                    [self.key UTF8String],
-                                                    [self.secret length],
-                                                    [self.secret UTF8String],
-                                                    NULL
-                                                    );
-	return status;
+[[NSUserDefaults standardUserDefaults] setObject:self.key forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_KEY", prefix, provider]];
+[[NSUserDefaults standardUserDefaults] setObject:self.secret forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_SECRET", prefix, provider]];
+[[NSUserDefaults standardUserDefaults] synchronize];
+return(0);
 }
 
 @end

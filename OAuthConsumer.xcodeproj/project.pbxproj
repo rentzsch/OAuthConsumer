@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4571A88A0DAC519C00E2A30E /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8840DAC519C00E2A30E /* Base64Transcoder.c */; };
+		4571A88B0DAC519C00E2A30E /* Base64Transcoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8850DAC519C00E2A30E /* Base64Transcoder.h */; };
+		4571A88C0DAC519C00E2A30E /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8860DAC519C00E2A30E /* hmac.c */; };
+		4571A88D0DAC519C00E2A30E /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8870DAC519C00E2A30E /* hmac.h */; };
+		4571A88E0DAC519C00E2A30E /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8880DAC519C00E2A30E /* sha1.c */; };
+		4571A88F0DAC519C00E2A30E /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8890DAC519C00E2A30E /* sha1.h */; };
+		4571A8920DAC51A900E2A30E /* OAToken_KeychainExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8900DAC51A900E2A30E /* OAToken_KeychainExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4571A8930DAC51A900E2A30E /* OAToken_KeychainExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */; };
+		4571A8A30DAC524F00E2A30E /* OAToken_KeychainExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */; };
+		4571A8B70DAC52D800E2A30E /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8840DAC519C00E2A30E /* Base64Transcoder.c */; };
+		4571A8B80DAC52D900E2A30E /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8860DAC519C00E2A30E /* hmac.c */; };
+		4571A8B90DAC52DA00E2A30E /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8880DAC519C00E2A30E /* sha1.c */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		FC37EA3C0CDA42A00036EF8E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		FC53ABB30CD99348001B1B99 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = FC53ABB20CD99348001B1B99 /* OAuthConsumer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC6C10C40CD9998400A85842 /* OARequestParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAAF3BB0CC9F06C00C52F82 /* OARequestParameter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC6C11080CD99ECD00A85842 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6C11070CD99ECD00A85842 /* libcrypto.dylib */; };
-		FC6C11090CD99ECD00A85842 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6C11070CD99ECD00A85842 /* libcrypto.dylib */; };
 		FC6C11E10CD9A40E00A85842 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF07F0CC95E6A00C52F82 /* OAToken.m */; };
 		FC6C126B0CD9AF6600A85842 /* OATestServer.rb in Resources */ = {isa = PBXBuildFile; fileRef = FC6C126A0CD9AF6600A85842 /* OATestServer.rb */; };
 		FC95DF340CCDBFE700B870E6 /* OAMutableURLRequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FC95DF330CCDBFE700B870E6 /* OAMutableURLRequestTest.m */; };
@@ -35,8 +45,6 @@
 		FCAAF2350CC985DA00C52F82 /* OAConsumerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF2340CC985DA00C52F82 /* OAConsumerTest.m */; };
 		FCAAF2740CC9885800C52F82 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAAF2730CC9885800C52F82 /* Security.framework */; };
 		FCAAF2750CC9885800C52F82 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAAF2730CC9885800C52F82 /* Security.framework */; };
-		FCAAF3510CC9E2D300C52F82 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAAF3500CC9E2D300C52F82 /* libssl.dylib */; };
-		FCAAF3520CC9E2D300C52F82 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAAF3500CC9E2D300C52F82 /* libssl.dylib */; };
 		FCAAF35B0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF35A0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.m */; };
 		FCAAF35C0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAAF3590CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCAAF35D0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAAF35A0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.m */; };
@@ -82,11 +90,18 @@
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* OAuthConsumer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer_Prefix.pch; sourceTree = "<group>"; };
+		4571A8840DAC519C00E2A30E /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
+		4571A8850DAC519C00E2A30E /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		4571A8860DAC519C00E2A30E /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		4571A8870DAC519C00E2A30E /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		4571A8880DAC519C00E2A30E /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		4571A8890DAC519C00E2A30E /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		4571A8900DAC51A900E2A30E /* OAToken_KeychainExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken_KeychainExtensions.h; sourceTree = "<group>"; };
+		4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAToken_KeychainExtensions.m; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* OAuthConsumer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthConsumer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		FC53ABB20CD99348001B1B99 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
-		FC6C11070CD99ECD00A85842 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = /usr/lib/libcrypto.dylib; sourceTree = "<absolute>"; };
 		FC6C126A0CD9AF6600A85842 /* OATestServer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = OATestServer.rb; sourceTree = "<group>"; };
 		FC95DF320CCDBFE700B870E6 /* OAMutableURLRequestTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAMutableURLRequestTest.h; sourceTree = "<group>"; };
 		FC95DF330CCDBFE700B870E6 /* OAMutableURLRequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAMutableURLRequestTest.m; sourceTree = "<group>"; };
@@ -112,7 +127,6 @@
 		FCAAF2330CC985DA00C52F82 /* OAConsumerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAConsumerTest.h; sourceTree = "<group>"; };
 		FCAAF2340CC985DA00C52F82 /* OAConsumerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAConsumerTest.m; sourceTree = "<group>"; };
 		FCAAF2730CC9885800C52F82 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
-		FCAAF3500CC9E2D300C52F82 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = /usr/lib/libssl.dylib; sourceTree = "<absolute>"; };
 		FCAAF3590CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
 		FCAAF35A0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
 		FCAAF35E0CC9E73200C52F82 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
@@ -144,8 +158,6 @@
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 				FCAAF2750CC9885800C52F82 /* Security.framework in Frameworks */,
-				FCAAF3520CC9E2D300C52F82 /* libssl.dylib in Frameworks */,
-				FC6C11090CD99ECD00A85842 /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,8 +167,6 @@
 			files = (
 				FCDD1C1E0CDD12C800DB97C5 /* OAuthConsumer.framework in Frameworks */,
 				FCAAF2740CC9885800C52F82 /* Security.framework in Frameworks */,
-				FCAAF3510CC9E2D300C52F82 /* libssl.dylib in Frameworks */,
-				FC6C11080CD99ECD00A85842 /* libcrypto.dylib in Frameworks */,
 				FC37EA3C0CDA42A00036EF8E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,7 +202,6 @@
 		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				FC6C11240CD9A22300A85842 /* Libraries */,
 				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
 				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
 			);
@@ -228,6 +237,8 @@
 				FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */,
 				FCB87CB00CDFF40A00C75049 /* OADataFetcher.h */,
 				FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */,
+				4571A8900DAC51A900E2A30E /* OAToken_KeychainExtensions.h */,
+				4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -255,8 +266,22 @@
 			isa = PBXGroup;
 			children = (
 				32DBCF5E0370ADEE00C91783 /* OAuthConsumer_Prefix.pch */,
+				4571A8830DAC519C00E2A30E /* Crypto */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4571A8830DAC519C00E2A30E /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				4571A8850DAC519C00E2A30E /* Base64Transcoder.h */,
+				4571A8840DAC519C00E2A30E /* Base64Transcoder.c */,
+				4571A8870DAC519C00E2A30E /* hmac.h */,
+				4571A8860DAC519C00E2A30E /* hmac.c */,
+				4571A8890DAC519C00E2A30E /* sha1.h */,
+				4571A8880DAC519C00E2A30E /* sha1.c */,
+			);
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 		FC6C10EA0CD99C5700A85842 /* Protocols */ = {
@@ -265,15 +290,6 @@
 				FC98DD570CD15F0400453F6C /* OASignatureProviding.h */,
 			);
 			name = Protocols;
-			sourceTree = "<group>";
-		};
-		FC6C11240CD9A22300A85842 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				FCAAF3500CC9E2D300C52F82 /* libssl.dylib */,
-				FC6C11070CD99ECD00A85842 /* libcrypto.dylib */,
-			);
-			name = Libraries;
 			sourceTree = "<group>";
 		};
 		FCAAF0680CC95B3D00C52F82 /* Cocoa Categories */ = {
@@ -338,6 +354,10 @@
 				FCB87CA90CDFF1A000C75049 /* OAServiceTicket.h in Headers */,
 				FCB87CB20CDFF40A00C75049 /* OADataFetcher.h in Headers */,
 				FCF317F00CE181A30023F60C /* OADataFetcherTest.h in Headers */,
+				4571A88B0DAC519C00E2A30E /* Base64Transcoder.h in Headers */,
+				4571A88D0DAC519C00E2A30E /* hmac.h in Headers */,
+				4571A88F0DAC519C00E2A30E /* sha1.h in Headers */,
+				4571A8920DAC51A900E2A30E /* OAToken_KeychainExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +472,10 @@
 				FC98DF590CD19A7C00453F6C /* NSURL+Base.m in Sources */,
 				FCB87CAA0CDFF1A000C75049 /* OAServiceTicket.m in Sources */,
 				FCB87CB30CDFF40A00C75049 /* OADataFetcher.m in Sources */,
+				4571A88A0DAC519C00E2A30E /* Base64Transcoder.c in Sources */,
+				4571A88C0DAC519C00E2A30E /* hmac.c in Sources */,
+				4571A88E0DAC519C00E2A30E /* sha1.c in Sources */,
+				4571A8930DAC51A900E2A30E /* OAToken_KeychainExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +504,10 @@
 				FCB87CAB0CDFF1A000C75049 /* OAServiceTicket.m in Sources */,
 				FCB87CB40CDFF40A00C75049 /* OADataFetcher.m in Sources */,
 				FCF317EF0CE181A30023F60C /* OADataFetcherTest.m in Sources */,
+				4571A8A30DAC524F00E2A30E /* OAToken_KeychainExtensions.m in Sources */,
+				4571A8B70DAC52D800E2A30E /* Base64Transcoder.c in Sources */,
+				4571A8B80DAC52D900E2A30E /* hmac.c in Sources */,
+				4571A8B90DAC52DA00E2A30E /* sha1.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +551,6 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = OAuthConsumer;
 				WRAPPER_EXTENSION = framework;
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
@@ -586,8 +613,6 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				INFOPLIST_FILE = "OAuthConsumerTestSuite-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
@@ -612,8 +637,6 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				INFOPLIST_FILE = "OAuthConsumerTestSuite-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (

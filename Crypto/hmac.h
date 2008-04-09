@@ -1,8 +1,9 @@
 //
-//  NSMutableURLRequest+Parameters.h
+//  hmac.h
+//  OAuthConsumer
 //
-//  Created by Jon Crosby on 10/19/07.
-//  Copyright 2007 Kaboomerang LLC. All rights reserved.
+//  Created by Jonathan Wight on 4/8/8.
+//  Copyright 2008 Jonathan Wight. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,14 +23,9 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "OARequestParameter.h"
-#import "NSURL+Base.h"
+#ifndef HMAC_H
+#define HMAC_H 1
 
+extern void hmac_sha1(const unsigned char *inText, int inTextLength, unsigned char* inKey, const unsigned int inKeyLength, unsigned char *outDigest);
 
-@interface NSMutableURLRequest (OAParameterAdditions)
-
-- (NSArray *)parameters;
-- (void)setParameters:(NSArray *)parameters;
-
-@end
+#endif /* HMAC_H */
