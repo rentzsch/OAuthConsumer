@@ -69,8 +69,6 @@
 [super init];
 NSString *theKey = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"OAUTH_%@_%@_KEY", prefix, provider]];
 NSString *theSecret = [[NSUserDefaults standardUserDefaults] stringForKey:[NSString stringWithFormat:@"OAUTH_%@_%@_SECRET", prefix, provider]];
-fprintf(stderr, "FOUND: %s %s\n", theKey.UTF8String, theSecret.UTF8String);
-
 if (theKey == NULL || theSecret == NULL)
 	return(nil);
 self.key = theKey;
@@ -81,8 +79,6 @@ return(self);
 
 - (int)storeInUserDefaultsWithServiceProviderName:(NSString *)provider prefix:(NSString *)prefix
 {
-fprintf(stderr, "WRITING: %s %s\n", self.key.UTF8String, self.secret.UTF8String);
-
 [[NSUserDefaults standardUserDefaults] setObject:self.key forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_KEY", prefix, provider]];
 [[NSUserDefaults standardUserDefaults] setObject:self.secret forKey:[NSString stringWithFormat:@"OAUTH_%@_%@_SECRET", prefix, provider]];
 [[NSUserDefaults standardUserDefaults] synchronize];
