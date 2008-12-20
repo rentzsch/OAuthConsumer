@@ -29,7 +29,11 @@
 
 @implementation OADataFetcher
 
-- (void)fetchDataWithRequest:(OAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector {
+- (void)fetchDataWithRequest:(OAMutableURLRequest *)aRequest 
+					delegate:(id)aDelegate 
+		   didFinishSelector:(SEL)finishSelector 
+			 didFailSelector:(SEL)failSelector 
+{
     request = aRequest;
     delegate = aDelegate;
     didFinishSelector = finishSelector;
@@ -40,7 +44,7 @@
     responseData = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
                                                      error:&error];
-											
+	
     if (response == nil || responseData == nil || error != nil) {
         OAServiceTicket *ticket= [[OAServiceTicket alloc] initWithRequest:request
                                                                  response:response

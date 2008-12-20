@@ -94,14 +94,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* OAuthConsumer */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = OAuthConsumer;
 		};
 		45AD60600DB4FF7600A34D21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FCAAF0740CC95C5E00C52F82 /* OAuthConsumerTestSuite */;
+			remoteGlobalIDString = FCAAF0740CC95C5E00C52F82;
 			remoteInfo = OAuthConsumerTestSuite;
 		};
 		FCAAF07A0CC95CCC00C52F82 /* PBXContainerItemProxy */ = {
@@ -118,6 +118,8 @@
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2DFA860F0EFCF7B200F849D3 /* OAAsynchronousDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAsynchronousDataFetcher.h; sourceTree = "<group>"; };
+		2DFA86100EFCF7B200F849D3 /* OAAsynchronousDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAsynchronousDataFetcher.m; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* OAuthConsumer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer_Prefix.pch; sourceTree = "<group>"; };
 		4571A8840DAC519C00E2A30E /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
 		4571A8850DAC519C00E2A30E /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
@@ -266,6 +268,8 @@
 				FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */,
 				FCB87CB00CDFF40A00C75049 /* OADataFetcher.h */,
 				FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */,
+				2DFA860F0EFCF7B200F849D3 /* OAAsynchronousDataFetcher.h */,
+				2DFA86100EFCF7B200F849D3 /* OAAsynchronousDataFetcher.m */,
 				4571A8900DAC51A900E2A30E /* OAToken_KeychainExtensions.h */,
 				4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */,
 			);

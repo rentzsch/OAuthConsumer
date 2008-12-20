@@ -10,18 +10,19 @@
 
 @implementation OAToken (OAToken_KeychainExtensions)
 
-- (id)initWithKeychainUsingAppName:(NSString *)name serviceProviderName:(NSString *)provider {
+- (id)initWithKeychainUsingAppName:(NSString *)name serviceProviderName:(NSString *)provider 
+{
     [super init];
     SecKeychainItemRef item;
 	NSString *serviceName = [NSString stringWithFormat:@"%@::OAuth::%@", name, provider];
 	OSStatus status = SecKeychainFindGenericPassword(NULL,
-                                                strlen([serviceName UTF8String]),
-                                                [serviceName UTF8String],
-                                                0,
-                                                NULL,
-                                                NULL,
-                                                NULL,
-                                                &item);
+													 strlen([serviceName UTF8String]),
+													 [serviceName UTF8String],
+													 0,
+													 NULL,
+													 NULL,
+													 NULL,
+													 &item);
     if (status != noErr) {
         return nil;
     }
@@ -71,11 +72,13 @@
 }
 
 
-- (int)storeInDefaultKeychainWithAppName:(NSString *)name serviceProviderName:(NSString *)provider {
+- (int)storeInDefaultKeychainWithAppName:(NSString *)name serviceProviderName:(NSString *)provider 
+{
     return [self storeInKeychain:NULL appName:name serviceProviderName:provider];
 }
 
-- (int)storeInKeychain:(SecKeychainRef)keychain appName:(NSString *)name serviceProviderName:(NSString *)provider {
+- (int)storeInKeychain:(SecKeychainRef)keychain appName:(NSString *)name serviceProviderName:(NSString *)provider 
+{
 	OSStatus status = SecKeychainAddGenericPassword(keychain,                                     
                                                     [name length] + [provider length] + 9, 
                                                     [[NSString stringWithFormat:@"%@::OAuth::%@", name, provider] UTF8String],

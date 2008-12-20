@@ -29,10 +29,10 @@
 
 @implementation NSString_URLEncodingTest
 
-- (void)testEncodedURLParameterString {
+- (void)testURLEncodedString {
     //TODO gather complete set of test chars -> encoded values
     NSString *starter = @"\"<>\%{}[]|\\^`hello #";
-    STAssertEqualObjects([starter encodedURLParameterString], @"\%22\%3C\%3E\%25\%7B\%7D\%5B\%5D\%7C\%5C\%5E\%60hello\%20\%23", @"The string was not encoded properly.");
+    STAssertEqualObjects([starter URLEncodedString], @"\%22\%3C\%3E\%25\%7B\%7D\%5B\%5D\%7C\%5C\%5E\%60hello\%20\%23", @"The string was not encoded properly.");
 }
 
 @end

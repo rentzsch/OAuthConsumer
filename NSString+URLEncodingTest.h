@@ -28,6 +28,6 @@
 
 @interface NSString_URLEncodingTest : SenTestCase
 
-- (void)testEncodedURLParameterString;
+- (void)testURLEncodedString;
 
 @end

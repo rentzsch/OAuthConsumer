@@ -30,22 +30,40 @@
 @implementation OARequestParameter
 @synthesize name, value;
 
-- (id)initWithName:(NSString *)aName value:(NSString *)aValue {
-    [super init];
-    self.name = aName;
-    self.value = aValue;
++ (id)requestParameterWithName:(NSString *)aName value:(NSString *)aValue 
+{
+	return [[[OARequestParameter alloc] initWithName:aName value:aValue] autorelease];
+}
+
+- (id)initWithName:(NSString *)aName value:(NSString *)aValue 
+{
+    if (self = [super init])
+	{
+		self.name = aName;
+		self.value = aValue;
+	}
     return self;
 }
 
-- (NSString *)URLEncodedName {
-    return [self.name encodedURLParameterString];
+- (void)dealloc
+{
+	[name release];
+	[value release];
+	[super dealloc];
 }
 
-- (NSString *)URLEncodedValue {
-    return [self.value encodedURLParameterString];
+- (NSString *)URLEncodedName 
+{
+	return [self.name URLEncodedString];
 }
 
-- (NSString *)URLEncodedNameValuePair {
+- (NSString *)URLEncodedValue 
+{
+    return [self.value URLEncodedString];
+}
+
+- (NSString *)URLEncodedNameValuePair 
+{
     return [NSString stringWithFormat:@"%@=%@", [self URLEncodedName], [self URLEncodedValue]];
 }
 
