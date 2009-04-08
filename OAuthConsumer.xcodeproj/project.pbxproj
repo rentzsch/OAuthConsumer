@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2DD545D80F8D1A02007228C8 /* OAAsynchronousDataFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DFA860F0EFCF7B200F849D3 /* OAAsynchronousDataFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DD545D90F8D1A1D007228C8 /* OAAsynchronousDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA86100EFCF7B200F849D3 /* OAAsynchronousDataFetcher.m */; };
 		4571A88A0DAC519C00E2A30E /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8840DAC519C00E2A30E /* Base64Transcoder.c */; };
 		4571A88B0DAC519C00E2A30E /* Base64Transcoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8850DAC519C00E2A30E /* Base64Transcoder.h */; };
 		4571A88C0DAC519C00E2A30E /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8860DAC519C00E2A30E /* hmac.c */; };
@@ -387,6 +389,7 @@
 				FCB87CA90CDFF1A000C75049 /* OAServiceTicket.h in Headers */,
 				FCB87CB20CDFF40A00C75049 /* OADataFetcher.h in Headers */,
 				FCF317F00CE181A30023F60C /* OADataFetcherTest.h in Headers */,
+				2DD545D80F8D1A02007228C8 /* OAAsynchronousDataFetcher.h in Headers */,
 				4571A88B0DAC519C00E2A30E /* Base64Transcoder.h in Headers */,
 				4571A88D0DAC519C00E2A30E /* hmac.h in Headers */,
 				4571A88F0DAC519C00E2A30E /* sha1.h in Headers */,
@@ -506,6 +509,7 @@
 				FC98DF590CD19A7C00453F6C /* NSURL+Base.m in Sources */,
 				FCB87CAA0CDFF1A000C75049 /* OAServiceTicket.m in Sources */,
 				FCB87CB30CDFF40A00C75049 /* OADataFetcher.m in Sources */,
+				2DD545D90F8D1A1D007228C8 /* OAAsynchronousDataFetcher.m in Sources */,
 				4571A88A0DAC519C00E2A30E /* Base64Transcoder.c in Sources */,
 				4571A88C0DAC519C00E2A30E /* hmac.c in Sources */,
 				4571A88E0DAC519C00E2A30E /* sha1.c in Sources */,

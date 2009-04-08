@@ -75,7 +75,11 @@
 - (void)cancel
 {
 	if (connection)
+	{
 		[connection cancel];
+		[connection release];
+		connection = nil;
+	}
 }
 
 - (void)dealloc
@@ -88,7 +92,7 @@
 }
 
 #pragma mark -
-#pragma mark NSURLConnection's delegate methods
+#pragma mark NSURLConnection methods
 
 - (void)connection:(NSURLConnection *)aConnection didReceiveResponse:(NSURLResponse *)aResponse
 {
@@ -128,4 +132,3 @@
 }
 
 @end
-
