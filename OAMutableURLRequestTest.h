@@ -44,5 +44,6 @@
 - (void)testGenerateNonce;
 - (void)testSignatureBaseString;
 - (void)testSignature;
+- (void)testOptionalOAuthParameters;
 
 @end

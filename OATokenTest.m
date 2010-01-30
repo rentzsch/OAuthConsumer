@@ -25,7 +25,7 @@
 
 
 #import "OATokenTest.h"
-
+#import "NSString+URLEncoding.h"
 
 @implementation OATokenTest
 
@@ -46,6 +46,15 @@
     OAToken *aToken = [[OAToken alloc] initWithHTTPResponseBody:[NSString stringWithFormat:@"oauth_token=%@&oauth_token_secret=%@", key, secret]];
     STAssertEqualObjects(aToken.key, key, @"Token key was incorrectly set to :%@", aToken.key);
     STAssertEqualObjects(aToken.secret, secret, @"Token secret was incorrect set to %@", aToken.secret);
+	[aToken release];
+	
+	NSString *yahooishKey = @"%A=123h%798sdfnF";
+	NSString *yahooishSecret = @"%A=234298273985";
+	aToken = [[OAToken alloc] initWithHTTPResponseBody:[NSString stringWithFormat:@"oauth_token=%@&oauth_token_secret=%@",
+														[yahooishKey URLEncodedString], [yahooishSecret URLEncodedString]]];
+	STAssertEqualObjects(aToken.key, yahooishKey, @"Yahoo like  token key was incorrectly set to %@", aToken.key);
+	STAssertEqualObjects(aToken.secret, yahooishSecret, @"Yahoo like token secret was incorrectly set to %@", aToken.secret);
+	[aToken release];
 }
 
 - (void)testStoreInDefaultKeychainWithAppName {

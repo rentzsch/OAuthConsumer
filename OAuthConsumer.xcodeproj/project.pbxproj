@@ -26,16 +26,10 @@
 		2DD545D90F8D1A1D007228C8 /* OAAsynchronousDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA86100EFCF7B200F849D3 /* OAAsynchronousDataFetcher.m */; };
 		4571A88A0DAC519C00E2A30E /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8840DAC519C00E2A30E /* Base64Transcoder.c */; };
 		4571A88B0DAC519C00E2A30E /* Base64Transcoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8850DAC519C00E2A30E /* Base64Transcoder.h */; };
-		4571A88C0DAC519C00E2A30E /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8860DAC519C00E2A30E /* hmac.c */; };
-		4571A88D0DAC519C00E2A30E /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8870DAC519C00E2A30E /* hmac.h */; };
-		4571A88E0DAC519C00E2A30E /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8880DAC519C00E2A30E /* sha1.c */; };
-		4571A88F0DAC519C00E2A30E /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8890DAC519C00E2A30E /* sha1.h */; };
 		4571A8920DAC51A900E2A30E /* OAToken_KeychainExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4571A8900DAC51A900E2A30E /* OAToken_KeychainExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4571A8930DAC51A900E2A30E /* OAToken_KeychainExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */; };
 		4571A8A30DAC524F00E2A30E /* OAToken_KeychainExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */; };
 		4571A8B70DAC52D800E2A30E /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8840DAC519C00E2A30E /* Base64Transcoder.c */; };
-		4571A8B80DAC52D900E2A30E /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8860DAC519C00E2A30E /* hmac.c */; };
-		4571A8B90DAC52DA00E2A30E /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 4571A8880DAC519C00E2A30E /* sha1.c */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		FC37EA3C0CDA42A00036EF8E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
@@ -125,10 +119,6 @@
 		32DBCF5E0370ADEE00C91783 /* OAuthConsumer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer_Prefix.pch; sourceTree = "<group>"; };
 		4571A8840DAC519C00E2A30E /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
 		4571A8850DAC519C00E2A30E /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
-		4571A8860DAC519C00E2A30E /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
-		4571A8870DAC519C00E2A30E /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
-		4571A8880DAC519C00E2A30E /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
-		4571A8890DAC519C00E2A30E /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
 		4571A8900DAC51A900E2A30E /* OAToken_KeychainExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken_KeychainExtensions.h; sourceTree = "<group>"; };
 		4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAToken_KeychainExtensions.m; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -311,10 +301,6 @@
 			children = (
 				4571A8850DAC519C00E2A30E /* Base64Transcoder.h */,
 				4571A8840DAC519C00E2A30E /* Base64Transcoder.c */,
-				4571A8870DAC519C00E2A30E /* hmac.h */,
-				4571A8860DAC519C00E2A30E /* hmac.c */,
-				4571A8890DAC519C00E2A30E /* sha1.h */,
-				4571A8880DAC519C00E2A30E /* sha1.c */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -391,8 +377,6 @@
 				FCF317F00CE181A30023F60C /* OADataFetcherTest.h in Headers */,
 				2DD545D80F8D1A02007228C8 /* OAAsynchronousDataFetcher.h in Headers */,
 				4571A88B0DAC519C00E2A30E /* Base64Transcoder.h in Headers */,
-				4571A88D0DAC519C00E2A30E /* hmac.h in Headers */,
-				4571A88F0DAC519C00E2A30E /* sha1.h in Headers */,
 				4571A8920DAC51A900E2A30E /* OAToken_KeychainExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,8 +495,6 @@
 				FCB87CB30CDFF40A00C75049 /* OADataFetcher.m in Sources */,
 				2DD545D90F8D1A1D007228C8 /* OAAsynchronousDataFetcher.m in Sources */,
 				4571A88A0DAC519C00E2A30E /* Base64Transcoder.c in Sources */,
-				4571A88C0DAC519C00E2A30E /* hmac.c in Sources */,
-				4571A88E0DAC519C00E2A30E /* sha1.c in Sources */,
 				4571A8930DAC51A900E2A30E /* OAToken_KeychainExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,8 +526,6 @@
 				FCF317EF0CE181A30023F60C /* OADataFetcherTest.m in Sources */,
 				4571A8A30DAC524F00E2A30E /* OAToken_KeychainExtensions.m in Sources */,
 				4571A8B70DAC52D800E2A30E /* Base64Transcoder.c in Sources */,
-				4571A8B80DAC52D900E2A30E /* hmac.c in Sources */,
-				4571A8B90DAC52DA00E2A30E /* sha1.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,10 +564,6 @@
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -610,10 +586,6 @@
 		1DEB91AF08733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -636,30 +608,24 @@
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Debug;
 		};
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Release;
 		};

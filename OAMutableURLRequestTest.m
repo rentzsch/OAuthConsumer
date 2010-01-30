@@ -96,4 +96,16 @@
     STAssertEqualObjects(hmacSha1Request.signature, @"tR3+Ty81lMeYAr/Fid0kMTYa/WM=", @"HMAC-SHA1 request signature does not match OAuth Spec, Appendix A.5.3");
 }
 
+- (void)testOptionalOAuthParameters {
+	// Optional OAuth parameters that should appear in the HTTP Authorization header.
+	[plaintextRequest setOAuthParameterName:@"oauth_callback" withValue:@"myurlhandler:oauth"];
+	[plaintextRequest setOAuthParameterName:@"oauth_verifier" withValue:@"abc123"];
+	
+	[plaintextRequest prepare];
+	
+	STAssertEqualObjects([plaintextRequest valueForHTTPHeaderField:@"Authorization"],
+						 @"OAuth realm=\"\", oauth_consumer_key=\"dpf43f3p2l4k3l03\", oauth_signature_method=\"PLAINTEXT\", oauth_signature=\"kd94hf93k423kf44%26\", oauth_timestamp=\"1191242090\", oauth_nonce=\"hsu94j3884jdopsl\", oauth_version=\"1.0\", oauth_callback=\"myurlhandler%3Aoauth\", oauth_verifier=\"abc123\"",
+						 @"Authorization header doesn't match expected value.");
+}
+
 @end
