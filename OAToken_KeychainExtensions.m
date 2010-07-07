@@ -44,8 +44,9 @@
     status = SecKeychainItemCopyContent(item, NULL, &list, &length, (void **)&password);
     
     if (status == noErr) {
-        self.key = [NSString stringWithCString:list.attr[0].data
-                                        length:list.attr[0].length];
+        self.key = [[[NSString alloc] initWithBytes:list.attr[0].data
+                                             length:list.attr[0].length
+                                           encoding:NSUTF8StringEncoding] autorelease];
         if (password != NULL) {
             char passwordBuffer[1024];
             
@@ -55,7 +56,7 @@
             strncpy(passwordBuffer, password, length);
             
             passwordBuffer[length] = '\0';
-			self.secret = [NSString stringWithCString:passwordBuffer];
+            self.secret = [NSString stringWithUTF8String:passwordBuffer];
         }
         
         SecKeychainItemFreeContent(&list, password);
