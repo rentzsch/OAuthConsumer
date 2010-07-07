@@ -30,7 +30,7 @@
 @implementation OAServiceTicket
 @synthesize request, response, didSucceed;
 
-- (id)initWithRequest:(OAMutableURLRequest *)aRequest response:(NSURLResponse *)aResponse didSucceed:(BOOL)success 
+- (id)initWithRequest:(OAMutableURLRequest *)aRequest response:(NSHTTPURLResponse *)aResponse didSucceed:(BOOL)success 
 {
     if (self = [super init])
 	{

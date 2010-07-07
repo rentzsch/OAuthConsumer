@@ -31,13 +31,13 @@
 @interface OAServiceTicket : NSObject {
 @private
     OAMutableURLRequest *request;
-    NSURLResponse *response;
+    NSHTTPURLResponse *response;
     BOOL didSucceed;
 }
 @property(retain) OAMutableURLRequest *request;
-@property(retain) NSURLResponse *response;
+@property(retain) NSHTTPURLResponse *response;
 @property(assign) BOOL didSucceed;
 
-- (id)initWithRequest:(OAMutableURLRequest *)aRequest response:(NSURLResponse *)aResponse didSucceed:(BOOL)success;
+- (id)initWithRequest:(OAMutableURLRequest *)aRequest response:(NSHTTPURLResponse *)aResponse didSucceed:(BOOL)success;
 
 @end

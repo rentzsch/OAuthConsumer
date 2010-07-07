@@ -58,7 +58,7 @@
 	{
 		if (responseData)
 			[responseData release];
-		responseData = [[NSMutableData data] retain];
+		responseData = [[NSMutableData alloc] init];
 	}
 	else
 	{
@@ -84,17 +84,17 @@
 
 - (void)dealloc
 {
-	if (request) [request release];
-	if (connection) [connection release];
-	if (response) [response release];
-	if (responseData) [responseData release];
+	[request release];
+	[connection release];
+	[response release];
+	[responseData release];
 	[super dealloc];
 }
 
 #pragma mark -
 #pragma mark NSURLConnection methods
 
-- (void)connection:(NSURLConnection *)aConnection didReceiveResponse:(NSURLResponse *)aResponse
+- (void)connection:(NSURLConnection *)aConnection didReceiveResponse:(NSHTTPURLResponse *)aResponse
 {
 	if (response)
 		[response release];
@@ -123,10 +123,18 @@
 {
 	OAServiceTicket *ticket = [[OAServiceTicket alloc] initWithRequest:request
 															  response:response
-															didSucceed:[(NSHTTPURLResponse *)response statusCode] < 400];
+															didSucceed:[response statusCode] < 400];
+    
+    NSStringEncoding encoding = NSISOLatin1StringEncoding;
+    NSString *contentType = [[[response allHeaderFields] objectForKey:@"Content-Type"] lowercaseString];
+    if (contentType && [contentType rangeOfString:@"charset=utf-8"].location != NSNotFound) {
+        encoding = NSUTF8StringEncoding;
+    }
+    NSString *responseString = [[[NSString alloc] initWithData:responseData encoding:encoding] autorelease];
+    
 	[delegate performSelector:didFinishSelector
 				   withObject:ticket
-				   withObject:responseData];
+				   withObject:responseString];
 	
 	[ticket release];
 }

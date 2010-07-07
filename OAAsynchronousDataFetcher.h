@@ -28,7 +28,7 @@
 
 @interface OAAsynchronousDataFetcher : NSObject {
     OAMutableURLRequest *request;
-    NSURLResponse *response;
+    NSHTTPURLResponse *response;
     NSURLConnection *connection;
     NSMutableData *responseData;
     id delegate;

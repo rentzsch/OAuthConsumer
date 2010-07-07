@@ -72,12 +72,12 @@
 }
 
 
-- (int)storeInDefaultKeychainWithAppName:(NSString *)name serviceProviderName:(NSString *)provider 
+- (OSStatus)storeInDefaultKeychainWithAppName:(NSString *)name serviceProviderName:(NSString *)provider 
 {
     return [self storeInKeychain:NULL appName:name serviceProviderName:provider];
 }
 
-- (int)storeInKeychain:(SecKeychainRef)keychain appName:(NSString *)name serviceProviderName:(NSString *)provider 
+- (OSStatus)storeInKeychain:(SecKeychainRef)keychain appName:(NSString *)name serviceProviderName:(NSString *)provider 
 {
 	OSStatus status = SecKeychainAddGenericPassword(keychain,                                     
                                                     [name length] + [provider length] + 9, 
