@@ -145,7 +145,7 @@ if (theRemainingBytes == 1)
 	if (theOutIndex % 74 == 72)
 		{
 		outOutputData[theOutIndex++] = '\r';
-		outOutputData[theOutIndex++] = '\n';
+		outOutputData[theOutIndex] = '\n';
 		}
 	}
 else if (theRemainingBytes == 2)
@@ -157,7 +157,7 @@ else if (theRemainingBytes == 2)
 	if (theOutIndex % 74 == 72)
 		{
 		outOutputData[theOutIndex++] = '\r';
-		outOutputData[theOutIndex++] = '\n';
+		outOutputData[theOutIndex] = '\n';
 		}
 	}
 return(true);
