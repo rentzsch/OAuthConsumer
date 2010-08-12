@@ -27,14 +27,17 @@
 #import "OAMutableURLRequest.h"
 
 
-@interface OAMutableURLRequest (Private)
+@interface OAMutableURLRequest ()
+@property(retain) NSString *nonce;
+@property(retain) NSString *timestamp;
+
 - (void)_generateTimestamp;
 - (void)_generateNonce;
 - (NSString *)_signatureBaseString;
 @end
 
 @implementation OAMutableURLRequest
-@synthesize signature, nonce;
+@synthesize signature, nonce, timestamp;
 
 #pragma mark init
 
@@ -140,6 +143,19 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 
 - (void)prepare 
 {
+    [self prepare:NO];
+}
+
+- (void)prepare:(BOOL)regenerateNonce
+{
+    if (regenerateNonce) {
+        self.timestamp = [[NSString stringWithFormat:@"%d", time(NULL)] retain];
+        CFUUIDRef theUUID = CFUUIDCreate(NULL);
+        CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+        NSMakeCollectable(theUUID);
+        self.nonce = (NSString *)string;
+    }
+    
     // sign
 	// Secrets must be urlencoded before concatenated with '&'
 	// TODO: if later RSA-SHA1 support is added then a little code redesign is needed
@@ -163,7 +179,7 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 		[extraParameters appendFormat:@", %@=\"%@\"",
 		 [parameterName URLEncodedString],
 		 [[extraOAuthParameters objectForKey:parameterName] URLEncodedString]];
-	}	
+	}
     
     NSString *oauthHeader = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", %@oauth_signature_method=\"%@\", oauth_signature=\"%@\", oauth_timestamp=\"%@\", oauth_nonce=\"%@\", oauth_version=\"1.0\"%@",
                              [realm URLEncodedString],
