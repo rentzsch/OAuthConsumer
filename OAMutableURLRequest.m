@@ -149,11 +149,8 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 - (void)prepare:(BOOL)regenerateNonce
 {
     if (regenerateNonce) {
-        self.timestamp = [[NSString stringWithFormat:@"%d", time(NULL)] retain];
-        CFUUIDRef theUUID = CFUUIDCreate(NULL);
-        CFStringRef string = CFUUIDCreateString(NULL, theUUID);
-        NSMakeCollectable(theUUID);
-        self.nonce = (NSString *)string;
+        [self _generateTimestamp];
+        [self _generateNonce];
     }
     
     // sign
