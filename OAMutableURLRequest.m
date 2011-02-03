@@ -201,10 +201,11 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 
 - (void)_generateNonce 
 {
+    [nonce release];
+    
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
-    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
-		CFRelease(theUUID);
-    nonce = (NSString *)string;
+    nonce = (NSString*)CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
 }
 
 - (NSString *)_signatureBaseString 
