@@ -228,6 +228,12 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
         [parameterPairs addObject:[param URLEncodedNameValuePair]];
     }
     
+    if (extraOAuthParameters) {
+        for (NSString *key in [extraOAuthParameters allKeys]) {
+            [parameterPairs addObject:[[OARequestParameter requestParameterWithName:key value:[extraOAuthParameters objectForKey:key]] URLEncodedNameValuePair]];
+        }
+    }
+    
     NSArray *sortedPairs = [parameterPairs sortedArrayUsingSelector:@selector(compare:)];
     NSString *normalizedRequestParameters = [sortedPairs componentsJoinedByString:@"&"];
     
